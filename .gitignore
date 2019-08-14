@@ -1,0 +1,9 @@
+!.gitkeep
+tmp
+bin/
+bin/*
+.settings/
+.settings/*
+.idea/
+.buildpath
+.project

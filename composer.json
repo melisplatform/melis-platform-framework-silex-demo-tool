@@ -1,0 +1,49 @@
+{
+  "name": "melisplatform/melis-platform-framework-silex-demo-tool",
+  "description": "This demo tool has for goal to show how you can use the framework Silex inside Melis Platform, so you're not locked on ZF.",
+  "type": "melisplatform-module",
+  "license": "OSL-3.0",
+  "homepage": "Use this repo:",
+  "support": {
+    "source": "https://github.com/melisplatform/melis-code-example-silex",
+    "issues": "/issues"
+  },
+  "keywords": [
+    "cms",
+    "melis",
+    "zf2",
+    "module"
+  ],
+  "extra": {
+    "module-name": "MelisPlatformFrameworkSilexDemoTool",
+  	"melis-site": false,
+    "melis-module-category": "core"
+  },
+  "require": {
+    "php": "^7.0",
+    "ext-openssl": "*",
+    "ext-json": "*",
+    "ext-pdo_mysql": "*",
+    "justinrainbow/json-schema": "5.2.1",
+    "silex/silex": "~2.0",
+    "doctrine/dbal": "~2.2",
+    "twig/twig": "^2.11",
+    "silex/web-profiler": "^2.0",
+    "symfony/form": "^3.4",
+    "symfony/twig-bridge": "^3.4",
+    "symfony/asset": "^3.4",
+    "symfony/translation": "^4.3",
+    "melisplatform/melis-core": "^3.1.0",
+    "melisplatform/melis-engine": "^3.1.0",
+    "melisplatform/melis-front": "^3.1.0",
+    "melisplatform/melis-cms": "^3.1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "MelisPlatformFrameworkSilexDemoTool\\": "src/"
+    }
+  }
+}
