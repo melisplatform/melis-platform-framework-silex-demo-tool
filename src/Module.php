@@ -26,7 +26,6 @@ class Module
 
         $this->createTranslations($e);
         $eventManager->attach(new SilexRouteListener());
-//        $eventManager->attach(new RenderSilexListener());
     }
 
     public function getConfig()
