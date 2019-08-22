@@ -8,6 +8,11 @@
  */
 
 return [
+    'third-party-framework' => [
+        'index-path' => [
+            '/framework/silex/web/index.php'
+        ]
+    ],
     'router' => [
         'routes' => [
         	'melis-backoffice' => [

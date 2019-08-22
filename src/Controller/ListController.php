@@ -26,7 +26,7 @@ class ListController extends AbstractActionController
         $view = new ViewModel();
         $view->melisKey = $this->getMelisKey();
         //executing the silex route by using MelisDispatchThirdPartyService
-        $this->serviceLocator->get('MelisDispatchThirdPartyService')->setRoute('/melis-news');
+        $this->serviceLocator->get('MelisDispatchThirdPartyService')->setRoute('/silex-demo');
         //Getting content from the silex route that has been executed and pass it to the view so that it will be displayed inside the melis platform.
         $view->silexContent = $this->serviceLocator->get('MelisDispatchThirdPartyService')->getContent();
 
