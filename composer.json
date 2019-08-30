@@ -3,7 +3,7 @@
   "description": "This demo tool has for goal to show how you can use the framework Silex inside Melis Platform, so you're not locked on ZF.",
   "type": "melisplatform-module",
   "license": "OSL-3.0",
-  "homepage": "Use this repo:",
+  "homepage": "https://github.com/melisplatform/melis-platform-framework-silex-demo-tool",
   "support": {
     "source": "https://github.com/melisplatform/melis-platform-framework-silex-demo-tool",
     "issues": "https://github.com/melisplatform/melis-platform-framework-silex-demo-tool/issues"
