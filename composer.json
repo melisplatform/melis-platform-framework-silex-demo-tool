@@ -6,7 +6,7 @@
   "homepage": "Use this repo:",
   "support": {
     "source": "https://github.com/melisplatform/melis-platform-framework-silex-demo-tool",
-    "issues": "/issues"
+    "issues": "https://github.com/melisplatform/melis-platform-framework-silex-demo-tool/issues"
   },
   "keywords": [
     "cms",
