@@ -40,11 +40,11 @@ CREATE TABLE `album` (
 --
 
 INSERT INTO `album` (`alb_id`, `alb_name`, `alb_date`, `alb_song_num`) VALUES
-  (1, 'Judas', '2019-07-22', 1),
-  (2, 'Priest', '2019-07-17', 2),
-  (3, 'Parachute', '2019-07-22', 2),
-  (4, 'Green Eyes', '2019-07-23', 1),
-  (5, 'Mamaland', '2019-07-22', 4);
+  (1, 'Album Vol. 1', '2019-06-21', 8),
+  (2, 'Album Vol. 2', '2019-06-27', 5),
+  (3, 'Album Vol. 3', '2019-06-22', 6),
+  (4, 'Album Vol. 4', '2019-06-23', 9),
+  (5, 'Album Vol.  5', '2019-06-22', 7);
 
 --
 -- Indexes for dumped tables

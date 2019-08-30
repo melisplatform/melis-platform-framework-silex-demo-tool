@@ -16,14 +16,10 @@
   ],
   "extra": {
     "module-name": "MelisPlatformFrameworkSilexDemoTool",
-  	"melis-site": false,
     "melis-module-category": "core"
   },
   "require": {
     "melisplatform/melis-platform-frameworks" : "*"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~4.8"
   },
   "autoload": {
     "psr-4": {
