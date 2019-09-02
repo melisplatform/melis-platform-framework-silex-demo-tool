@@ -16,6 +16,7 @@
   ],
   "extra": {
     "module-name": "MelisPlatformFrameworkSilexDemoTool",
+    "dbdeploy": true,
     "melis-module-category": "core"
   },
   "require": {
