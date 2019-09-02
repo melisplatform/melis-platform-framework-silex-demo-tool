@@ -21,6 +21,7 @@
   },
   "require": {
     "melisplatform/melis-platform-frameworks" : "*",
+    "melisplatform/melis-platform-framework-silex" : "*",
     "melisplatform/melis-platform-framework-silex-demo-tool-logic" : "*",
   },
   "autoload": {
