@@ -23,8 +23,9 @@ CREATE TABLE `album` (
   `alb_id` int(11) NOT NULL,
   `alb_name` varchar(255) NOT NULL,
   `alb_date` date NOT NULL,
-  `alb_song_num` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `alb_song_num` int(11) NOT NULL,
+  PRIMARY KEY (`alb_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `album`
@@ -37,26 +38,6 @@ INSERT INTO `album` (`alb_id`, `alb_name`, `alb_date`, `alb_song_num`) VALUES
   (4, 'Album Vol. 4', '2019-06-23', 9),
   (5, 'Album Vol.  5', '2019-06-22', 7);
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `album`
---
-ALTER TABLE `album`
-  ADD PRIMARY KEY (`alb_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `album`
---
-ALTER TABLE `album`
-  MODIFY `alb_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
