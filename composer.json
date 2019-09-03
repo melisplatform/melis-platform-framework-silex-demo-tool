@@ -20,8 +20,8 @@
     "melis-module-category": "core"
   },
   "require": {
-    "melisplatform/melis-platform-framework-silex" : "*",
     "melisplatform/melis-platform-framework-silex-demo-tool-logic" : "*",
+    "melisplatform/melis-platform-framework-silex" : "*",
   },
   "autoload": {
     "psr-4": {
