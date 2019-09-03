@@ -10,7 +10,7 @@
 return [
     'third-party-framework' => [
         'index-path' => [
-            '/framework/silex/web/index.php'
+            '/silex/web/index.php'
         ]
     ],
     'router' => [
