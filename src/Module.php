@@ -25,7 +25,6 @@ class Module
         $moduleRouteListener->attach($eventManager);
 
         $this->createTranslations($e);
-//        $eventManager->attach(new SilexRouteListener());
     }
 
     public function getConfig()
