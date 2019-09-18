@@ -35,6 +35,9 @@ class Module
             include __DIR__ . '/../config/app.interface.php',
             include __DIR__ . '/../config/app.tools.php',
             include __DIR__ . '/../config/app.toolstree.php',
+
+            // Templating plugins
+            include __DIR__ . '/../config/plugins/SilexDemoToolPlugin.config.php',
         );
 
         foreach ($configFiles as $file) {

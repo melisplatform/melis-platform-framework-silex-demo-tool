@@ -7,4 +7,6 @@
 		'tr_melisplatformsilexdemotool_album_date_added' => 'Date Added',
 		'tr_melisplatformsilexdemotool_tool_title' => 'A tool embryo made in Silex',
 		'tr_melisplatformsilexdemotool_tool_desc' => 'This demo tool has for goal to show how you can use the framework Silex inside Melis Platform, so you\'re not locked on ZF.',
+		'tr_melisplatformsilexdemotool_plugin_name' => 'Silex Demo Tool',
+		'tr_melisplatformsilexdemotool_plugin_Description' => 'This demo tool has for goal to show how you can use the framework Silex inside Melis Platform, so you\'re not locked on ZF.',
     ];

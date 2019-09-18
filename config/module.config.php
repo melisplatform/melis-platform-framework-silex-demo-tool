@@ -60,11 +60,18 @@ return [
             'MelisPlatformFrameworkSilexDemoTool\Controller\List' => 'MelisPlatformFrameworkSilexDemoTool\Controller\ListController',
         ],
     ],
+    'controller_plugins' => array(
+        'invokables' => array(
+            'SilexDemoToolPlugin' => 'MelisPlatformFrameworkSilexDemoTool\Controller\Plugin\SilexDemoToolPlugin',
+        )
+    ),
     'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
         'template_map' => [
+            'MelisPlatformFrameworkSilexDemoTool/demotool' => __DIR__ . '/../view/melis-platform-framework-silex-demo-tool/plugins/demotool.phtml',
+            'MelisPlatformFrameworkSilexDemoTool/demotool/melis/form' => __DIR__ . '/../view/melis-platform-framework-silex-demo-tool/plugins/form.phtml',
         ],
         'template_path_stack' => [
             __DIR__ . '/../view',
