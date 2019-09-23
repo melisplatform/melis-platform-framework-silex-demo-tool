@@ -3,5 +3,10 @@
         margin-bottom: initial;
     }
 </style>
-
-<?php echo $this->silexContent; ?>
+<?php if ($this->pluginData['renderMode'] == 'front' || $this->pluginData['previewMode'] == true) {?>
+    <div class="<?php echo "$this->widthDesktop $this->widthTablet $this->widthMobile" ?>" >
+<?php } else {?>
+    <div class="">
+<?php }?>
+        <?php echo $this->silexContent; ?>
+    </div>
