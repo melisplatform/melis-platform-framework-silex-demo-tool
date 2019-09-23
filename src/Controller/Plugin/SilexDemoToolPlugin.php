@@ -40,10 +40,21 @@ class SilexDemoToolPlugin extends MelisTemplatingPlugin
         //Getting content from the silex route that has been executed and pass it to the view so that it will be displayed inside the melis platform.
         $silexContent = $this->getServiceLocator()->get('MelisPlatformService')->getContent();
 
+        /*
+         * construct view variables
+         */
+        $pluginData = $this->getFormData();
+        // get preview mode
+        $pluginData['previewMode'] = $this->previewMode;
+        // get render mode
+        $pluginData['renderMode'] = $this->renderMode;
+
         // Create an array with the variables that will be available in the view
         $viewVariables = array(
             'pluginId' => $this->pluginFrontConfig['id'],
-            'silexContent' => $silexContent
+            'silexContent' => $silexContent,
+            'pluginData'   => $pluginData
+
         );
         
         // return the variable array and let the view be created
@@ -184,8 +195,22 @@ class SilexDemoToolPlugin extends MelisTemplatingPlugin
         if(!empty($parameters['sliderId']))
             $xmlValueFormatted .= "\t\t" . '<sliderId><![CDATA[' . $parameters['sliderId'] . ']]></sliderId>';
 
+        // for resizing
+        $widthDesktop = null;
+        $widthMobile   = null;
+        $widthTablet  = null;
+        if (! empty($parameters['melisPluginDesktopWidth'])) {
+            $widthDesktop =  " width_desktop=\"" . $parameters['melisPluginDesktopWidth'] . "\" ";
+        }
+        if (! empty($parameters['melisPluginMobileWidth'])) {
+            $widthMobile =  "width_mobile=\"" . $parameters['melisPluginMobileWidth'] . "\" ";
+        }
+        if (! empty($parameters['melisPluginTabletWidth'])) {
+            $widthTablet =  "width_tablet=\"" . $parameters['melisPluginTabletWidth'] . "\" ";
+        }
+
         // Something has been saved, let's generate an XML for DB
-        $xmlValueFormatted = "\t" . '<' . $this->pluginXmlDbKey . ' id="' . $parameters['melisPluginId'] . '">' .
+        $xmlValueFormatted = "\t" . '<' . $this->pluginXmlDbKey . ' id="' . $parameters['melisPluginId'] . '"' .$widthDesktop . $widthMobile . $widthTablet . '>' .
             $xmlValueFormatted .
             "\t" . '</' . $this->pluginXmlDbKey . '>' . "\n";
 
