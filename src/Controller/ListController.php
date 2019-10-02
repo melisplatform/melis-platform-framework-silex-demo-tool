@@ -41,4 +41,46 @@ class ListController extends AbstractActionController
 
         return $melisKey;
     }
+    /**
+     * The parent container of all modals, this is where you initialze your modal.
+     * @return \Zend\View\Model\ViewModel
+     */
+    public function renderToolModalContainerAction()
+    {
+
+        $id = $this->params()->fromRoute('id', $this->params()->fromQuery('id', ''));
+
+        $melisKey = $this->getMelisKey();
+
+        $view = new ViewModel();
+        $view->setTerminal(false);
+        $view->melisKey = $melisKey;
+        $view->id = $id;
+
+        return $view;
+    }
+
+    public function renderToolAlbumModalCreateHandlerAction(){
+
+        $translator = $this->getServiceLocator()->get('translator');
+
+        $melisKey = $this->params()->fromRoute('melisKey', '');
+
+        $view = new ViewModel();
+
+        $view->melisKey = $melisKey;
+        $view->title = $translator->translate("tr_melisplatformsilexdemotool_create_album");
+
+        return $view;
+    }
+
+    /**
+     * @return array|object
+     */
+    private function tool()
+    {
+        $tool = $this->getServiceLocator()->get('MelisCoreTool');
+        $tool->setMelisToolKey('melistoolprospects', 'melistoolprospects_tool_prospects_themes');
+        return $tool;
+    }
 }

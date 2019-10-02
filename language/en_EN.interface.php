@@ -9,4 +9,6 @@
 		'tr_melisplatformsilexdemotool_tool_desc' => 'This demo tool has for goal to show how you can use the framework Silex inside Melis Platform, so you\'re not locked on ZF.',
 		'tr_melisplatformsilexdemotool_plugin_name' => 'Silex Plugin',
 		'tr_melisplatformsilexdemotool_plugin_Description' => 'This plugin displays content requested from Silex.',
+		'tr_melisplatformsilexdemotool_create_album' => 'Album',
+
     ];
