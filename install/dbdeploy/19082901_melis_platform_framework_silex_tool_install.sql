@@ -17,9 +17,9 @@
 --
 -- Table structure for table `album`
 --
-DROP TABLE IF EXISTS `album` ;
+DROP TABLE IF EXISTS `melis_demo_album` ;
 
-CREATE TABLE `album` (
+CREATE TABLE `melis_demo_album` (
   `alb_id` int(11) NOT NULL,
   `alb_name` varchar(255) NOT NULL,
   `alb_date` date NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE `album` (
 -- Dumping data for table `album`
 --
 
-INSERT INTO `album` (`alb_id`, `alb_name`, `alb_date`, `alb_song_num`) VALUES
+INSERT INTO `melis_demo_album` (`alb_id`, `alb_name`, `alb_date`, `alb_song_num`) VALUES
   (1, 'Album Vol. 1', '2019-06-21', 8),
   (2, 'Album Vol. 2', '2019-06-27', 5),
   (3, 'Album Vol. 3', '2019-06-22', 6),
