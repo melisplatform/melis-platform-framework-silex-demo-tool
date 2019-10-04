@@ -26,7 +26,7 @@ class ListController extends AbstractActionController
         $view = new ViewModel();
         $view->melisKey = $this->getMelisKey();
         //executing the silex route by using MelisDispatchThirdPartyService
-        $this->serviceLocator->get('MelisPlatformService')->setRoute('/silex-list');
+        $this->serviceLocator->get('MelisPlatformService')->setRoute('/melis/silex-list');
         //Getting content from the silex route that has been executed and pass it to the view so that it will be displayed inside the melis platform.
         $view->silexContent = $this->serviceLocator->get('MelisPlatformService')->getContent();
 
@@ -40,38 +40,6 @@ class ListController extends AbstractActionController
         $melisKey = $this->params()->fromRoute('melisKey', null);
 
         return $melisKey;
-    }
-    /**
-     * The parent container of all modals, this is where you initialze your modal.
-     * @return \Zend\View\Model\ViewModel
-     */
-    public function renderToolModalContainerAction()
-    {
-
-        $id = $this->params()->fromRoute('id', $this->params()->fromQuery('id', ''));
-
-        $melisKey = $this->getMelisKey();
-
-        $view = new ViewModel();
-        $view->setTerminal(false);
-        $view->melisKey = $melisKey;
-        $view->id = $id;
-
-        return $view;
-    }
-
-    public function renderToolAlbumModalCreateHandlerAction(){
-
-        $translator = $this->getServiceLocator()->get('translator');
-
-        $melisKey = $this->params()->fromRoute('melisKey', '');
-
-        $view = new ViewModel();
-
-        $view->melisKey = $melisKey;
-        $view->title = $translator->translate("tr_melisplatformsilexdemotool_create_album");
-
-        return $view;
     }
 
     /**

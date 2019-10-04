@@ -36,55 +36,7 @@ return [
                     ]
                 ]
             ],
-            'datas' => [],
-            'interface' => [
-                'melisplatformsilexdemotool_album_modal_container' => array(
-                    'conf' => array(
-                        'id' => 'id_melisplatformsilexdemotool_album_modal_container',
-                        'name' => 'tr_meliscore_tool_gen_modal',
-                        'melisKey' => 'melisplatformsilexdemotool_album_modal_container',
-                    ),
-                    'forward' => array(
-                        'module' => 'MelisPlatformFrameworkSilexDemoTool',
-                        'controller' => 'List',
-                        'action' => 'render-tool-modal-container',
-                        'jscallback' => '',
-                        'jsdatas' => array()
-                    ),
-                    'interface' => array(
-                        'melisplatformsilexdemotool_create_album_handler' => array(
-                            'conf' => array(
-                                'class' => 'glyphicons plus',
-                                'id' => 'id_melisplatformsilexdemotool_create_album_handler',
-                                'name' => 'tr_melisplatformsilexdemotool_create_album',
-                                'melisKey' => 'melisplatformsilexdemotool_create_album_handler',
-                            ),
-                            'forward' => array(
-                                'module' => 'MelisPlatformFrameworkSilexDemoTool',
-                                'controller' => 'List',
-                                'action' => 'render-tool-album-modal-create-handler',
-                                'jscallback' => '',
-                                'jsdatas' => array()
-                            ),
-                        ),
-
-//                        'melisplatformsilexdemotool_edit_album_handler' => array(
-//                            'conf' => array(
-//                                'id' => 'id_melisplatformsilexdemotool_edit_album_handler',
-//                                'name' => 'tr_melisplatformsilexdemotool_edit_album',
-//                                'melisKey' => 'melisplatformsilexdemotool_edit_album_handler',
-//                            ),
-//                            'forward' => array(
-//                                'module' => 'MelisPlatformFrameworkSilexDemoTool',
-//                                'controller' => 'List',
-//                                'action' => 'render-tool-album-modal-edit-handler',
-//                                'jscallback' => '',
-//                                'jsdatas' => array()
-//                            ),
-//                        ),
-                    ),
-                ),
-            ]
+            'datas' => []
         ]
     ]
 ];
