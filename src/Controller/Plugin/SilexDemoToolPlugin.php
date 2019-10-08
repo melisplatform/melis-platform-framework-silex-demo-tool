@@ -36,7 +36,7 @@ class SilexDemoToolPlugin extends MelisTemplatingPlugin
         $id   = isset($this->pluginFrontConfig['demoToolId']) ? $this->pluginFrontConfig['demoToolId'] : null;
 
         //executing the silex route by using MelisDispatchThirdPartyService
-        $this->getServiceLocator()->get('MelisPlatformService')->setRoute('/silex-plugin');
+        $this->getServiceLocator()->get('MelisPlatformService')->setRoute('/melis/silex-plugin');
         //Getting content from the silex route that has been executed and pass it to the view so that it will be displayed inside the melis platform.
         $silexContent = $this->getServiceLocator()->get('MelisPlatformService')->getContent();
 
