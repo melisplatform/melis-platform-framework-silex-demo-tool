@@ -14,7 +14,7 @@ $(function(){
             encode		: true,
         }).done(function(data){
             if(data.success) {
-                silexTrans = data.translation
+                silexTrans = data.translation;
                 silexJs(silexTrans);
             }
         });
@@ -103,7 +103,6 @@ $(function(){
                     var modalUrl = "/melis/silex-album-form";
                     melisHelper.createModal(null,null,false,data.album,modalUrl,function() {
                         melisCoreTool.done("button.btn_meliscodeexamplesilex_edit");
-
                     });
                 }
             });
