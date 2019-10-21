@@ -2,9 +2,7 @@
 
 
 $(function(){
-
-    getSilexTranslation();
-
+    silexJs();
     function getSilexTranslation() {
         var silexTrans;
         $.ajax({
@@ -19,13 +17,13 @@ $(function(){
             }
         });
     }
-
     function silexJs(silexTranslations) {
         var body = $("body");
 
+        console.log(silexTranslations);
         body.on("click", '#meliscodeexamplesilex_tool_new_album', function(){
             melisCoreTool.pending('button#meliscodeexamplesilex_tool_new_album');
-            var modalUrl = "/melis/silex-album-form";
+            var modalUrl = "/melis/silex-create-album";
             melisHelper.createModal(null,null,false,[],modalUrl,function() {
                 melisCoreTool.done("button#meliscodeexamplesilex_tool_new_album");
             });
@@ -50,7 +48,9 @@ $(function(){
                 }
                 else {
                     melisHelper.melisKoNotification(data.title, data.message, data.errors, 0);
+                    // melisCoreTool.highlightErrors(data.success, data.errors, "prospects_theme_form");
                 }
+                // melisCore.flashMessenger();
                 $(formId + " input, button").not("input#alb_id").removeAttr("disabled");
             });
 
@@ -64,7 +64,7 @@ $(function(){
                 translations.tr_meliscore_common_yes,
                 translations.tr_meliscore_common_no,
                 silexTranslations.tr_melisplatformsilexdemotool_plugin_name,
-                silexTranslations.tr_meliscodeexamplesilex_album_delete_confirm,
+                null,
                 function() {
                     $.ajax({
                         type        : 'POST',
@@ -81,34 +81,16 @@ $(function(){
                         }
                         else {
                             melisHelper.melisKoNotification(data.title, data.message, data.errors, 0);
+                            // melisCoreTool.highlightErrors(data.success, data.errors, "prospects_theme_form");
                         }
+                        // melisCore.flashMessenger();
                     });
                 }
             );
 
             melisCoreTool.done("button.btn_meliscodeexamplesilex_delete");
         });
-
-        body.on("click", '.btn_meliscodeexamplesilex_edit', function(){
-            melisCoreTool.pending('button.btn_meliscodeexamplesilex_edit');
-            var id = $(this).data("albumid");
-            $.ajax({
-                type        : 'POST',
-                url         : '/melis/silex-edit-album',
-                data        : {id : id},
-                dataType    : 'json',
-                encode		: true,
-            }).done(function(data){
-                if(data.success) {
-                    var modalUrl = "/melis/silex-album-form";
-                    melisHelper.createModal(null,null,false,data.album,modalUrl,function() {
-                        melisCoreTool.done("button.btn_meliscodeexamplesilex_edit");
-
-                    });
-                }
-            });
-
-        });
     }
+
 });
 

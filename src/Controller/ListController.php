@@ -26,7 +26,7 @@ class ListController extends AbstractActionController
         $view = new ViewModel();
         $view->melisKey = $this->getMelisKey();
         //executing the silex route by using MelisDispatchThirdPartyService
-        $this->serviceLocator->get('MelisPlatformService')->setRoute('/silex-list');
+        $this->serviceLocator->get('MelisPlatformService')->setRoute('/melis/silex-list');
         //Getting content from the silex route that has been executed and pass it to the view so that it will be displayed inside the melis platform.
         $view->silexContent = $this->serviceLocator->get('MelisPlatformService')->getContent();
 
@@ -40,5 +40,15 @@ class ListController extends AbstractActionController
         $melisKey = $this->params()->fromRoute('melisKey', null);
 
         return $melisKey;
+    }
+
+    /**
+     * @return array|object
+     */
+    private function tool()
+    {
+        $tool = $this->getServiceLocator()->get('MelisCoreTool');
+        $tool->setMelisToolKey('melistoolprospects', 'melistoolprospects_tool_prospects_themes');
+        return $tool;
     }
 }
