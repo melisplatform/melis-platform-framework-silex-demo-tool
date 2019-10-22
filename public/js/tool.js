@@ -57,6 +57,9 @@ $(function(){
                 encode		: true,
             }).done(function(data){
                 if(data.success) {
+                    //reloading the table to update with the deleted file
+                    $("#silexDemoToolAlbumTable").DataTable().ajax.reload();
+
                     //hiding the create form modal once saving is successful
                     $(".modal").modal("hide");
 
@@ -107,7 +110,7 @@ $(function(){
                         }
                         else {
                             //adding notification  message for failure deletion of data
-                            melisHelper.melisKoNotification(data.title, data.message, data.errors, 0);
+                            melisHelper.melisKoNotification(data.title, data.message, [], 0);
                         }
                     });
                 }
