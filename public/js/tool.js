@@ -73,8 +73,8 @@ $(function(){
 
                 //re-enable all inputs and buttons once the all the action is done failed or success
                 $(formId + " input, button").not("input#alb_id").removeAttr("disabled");
+                melisCore.flashMessenger();
             });
-
             e.preventDefault();
         });
 
@@ -89,7 +89,7 @@ $(function(){
             //confirmation modal that will pop up whenever the delete button is clicked
             melisCoreTool.confirm(
                 translations.tr_meliscore_common_yes, // translation for "yes" taken from melis translations.
-                translations.tr_meliscore_common_no, // translation for "mo" taken from melis translations.
+                translations.tr_meliscore_common_no, // translation for "no" taken from melis translations.
                 silexTranslations.tr_melisplatformsilexdemotool_plugin_name, // translation for the confirmation title taken from SILEX translations.
                 silexTranslations.tr_meliscodeexamplesilex_album_delete_confirm, // translation for the confirmation message taken from SILEX translations.
                 function() {
@@ -112,6 +112,7 @@ $(function(){
                             //adding notification  message for failure deletion of data
                             melisHelper.melisKoNotification(data.title, data.message, [], 0);
                         }
+                        melisCore.flashMessenger();
                     });
                 }
             );
