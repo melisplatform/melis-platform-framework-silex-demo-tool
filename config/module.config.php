@@ -11,7 +11,18 @@ return [
     'third-party-framework' => [
         'index-path' => [
             '/Silex/web/index.php'
-        ]
+        ],
+        'translations' => [
+            'locale' => [
+                'en_EN' => [
+                    __DIR__ .'/../../melis-platform-framework-silex-demo-tool-logic/src/Translations/en_EN.interface.php'
+                ],
+                'fr_FR' => [
+                    __DIR__ .'/../../melis-platform-framework-silex-demo-tool-logic/src/Translations/fr_FR.interface.php'
+                ]
+            ],
+        ],
+
     ],
     'router' => [
         'routes' => [
