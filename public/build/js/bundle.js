@@ -38,6 +38,9 @@ $(function(){
                 //hiding the create form modal once saving is successful
                 $(".modal").modal("hide");
 
+                //zone reload
+                melisHelper.zoneReload("id_melisplatformsilexdemotool_content","MelisPlatformFrameworkSilexDemoTool_content");
+
                 //adding notification  message for successful saving of data
                 melisHelper.melisOkNotification(data.title, data.message);
             }
@@ -82,6 +85,9 @@ $(function(){
 
                         //adding notification message for successful deletion of data
                         melisHelper.melisOkNotification(data.title, data.message);
+
+                        //zone reload
+                        melisHelper.zoneReload("id_melisplatformsilexdemotool_content","MelisPlatformFrameworkSilexDemoTool_content");
                     }
                     else {
                         //adding notification  message for failure deletion of data
@@ -128,6 +134,7 @@ $(function(){
     //Table Refresh button
     body.on("click", '.silexDemoToolAlbumTableRefreshBtn', function(){
         $("#silexDemoToolAlbumTable").DataTable().ajax.reload();
+        melisHelper.zoneReload("id_melisplatformsilexdemotool_content","MelisPlatformFrameworkSilexDemoTool_content");
     });
 
 });
