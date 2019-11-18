@@ -33,7 +33,7 @@ return array(
                             'css' => array(
                             ),
                             'js' => array(
-                                '/MelisPlatformFrameworkSilexDemoTool/plugins/js/plugin.cmsSlider.init.js'
+                                '/MelisPlatformFrameworkSilexDemoTool/plugins/js/plugin.demotool.init.js'
                             ),
                         ),
                         'js_initialization' => array(),
