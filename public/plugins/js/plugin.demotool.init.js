@@ -1,4 +1,4 @@
-function demoTool_init(pluginId){
+window.demoTool_init = function(pluginId){
     // declaring parameters variable for old / cross browser compatability
     if(typeof pluginId === "undefined") pluginId = null;
 
@@ -10,5 +10,5 @@ function demoTool_init(pluginId){
 }
 
 $(function(){
-    demoTool_init("cms-slider");
+    demoTool_init("demo-tool");
 })
