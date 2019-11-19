@@ -47,6 +47,9 @@ $(function(){
             else {
                 //adding notification  message for failure saving of data
                 melisHelper.melisKoNotification(data.title, data.message, data.errors, 0);
+
+                //highlight fields with error
+                melisCoreTool.highlightErrors(data.success, data.errors, "melis_silex_album_form");
             }
 
             //re-enable all inputs and buttons once the all the action is done failed or success
