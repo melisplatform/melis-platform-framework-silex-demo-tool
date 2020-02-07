@@ -1,6 +1,6 @@
 # melis-platform-framwork-silex-demo-tool
 
-This Melis module acts as the container that will display the content of the Silex based modules as a tool in the Melis Platform.
+This demo tool has for goal to show how you can use the framework Silex inside Melis Platform, so you're not locked on ZF.
 
 ### Prerequisites
 
